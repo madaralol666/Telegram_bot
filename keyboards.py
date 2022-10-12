@@ -1,37 +1,48 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.callback_data import CallbackData
-from Config import url_translate
+from texts import main_btns, pods_btns, cancel_btn, buy_btn
 
 
-keyboard = ReplyKeyboardMarkup(
+keyboard_main = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text='button1'),
-            KeyboardButton(text='button2')
+            KeyboardButton(text=main_btns[0]),
+            KeyboardButton(text=main_btns[1])
         ],
         [
-            KeyboardButton(text='button3')
+            KeyboardButton(text=main_btns[2]),
+            KeyboardButton(text=main_btns[3])
+        ],
+        [
+            KeyboardButton(text=main_btns[4])
         ]
     ], resize_keyboard=True
 )
 
-cb = CallbackData('buy', 'id', 'name')
+cb_pods = CallbackData('buy', 'name')
 
-keyboard1 = InlineKeyboardMarkup(
-    inline_keyboard=[
+
+keyboard_second = InlineKeyboardMarkup(
+    inline_keyboard = [
         [
-            InlineKeyboardButton(text='Translate', callback_data='buy:22:tr')
+            InlineKeyboardButton(text = pods_btns[0], callback_data = f'buy:{pods_btns[0]}'),
+            InlineKeyboardButton(text = pods_btns[1], callback_data = f'buy:{pods_btns[1]}')
         ],
         [
-             InlineKeyboardButton(text='Cancel', callback_data='cancel')
+            InlineKeyboardButton(text = pods_btns[2], callback_data = f'buy:{pods_btns[2]}'),
+            InlineKeyboardButton(text = pods_btns[3], callback_data = f'buy:{pods_btns[3]}')
+        ], 
+        [
+            InlineKeyboardButton(text=cancel_btn, callback_data='cancel')
         ]
-    ]   
+    ]
 )
 
-translate_key = InlineKeyboardMarkup(
-    inline_keyboard=[
+keyboard_third = InlineKeyboardMarkup(
+    inline_keyboard = [
         [
-            InlineKeyboardButton('Buy', url=url_translate)
+            InlineKeyboardButton(text = buy_btn, callback_data = f'buy:{buy_btn}'),
+            InlineKeyboardButton(text = cancel_btn, callback_data = f'buy:{cancel_btn}')
         ]
     ]
 )
