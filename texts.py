@@ -19,8 +19,8 @@ pods_btns = [
     'Drag 2',
     'Xros mini'
 ]
-
-text_xros2 = "➖➖➖➖➖➖➖➖➖➖➖➖" + f"\nТовар: name" + f"\nВ наличии: ⭕ or ✅" + "\n➖➖➖➖➖➖➖➖➖➖➖➖"
+name_pod = ''
+text_xros2 = "➖➖➖➖➖➖➖➖➖➖➖➖" + f"\nТовар: {name_pod}" + f"\nВ наличии: ⭕ or ✅" + "\n➖➖➖➖➖➖➖➖➖➖➖➖"
     
 
 
