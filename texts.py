@@ -1,5 +1,6 @@
-welcome = 'Добро пожаловать, в бота [NAME], здесь вы сможете приобрести товары различных категорий.'
-
+def welc(text):
+    welcome = f'Добро пожаловать, в бота {text}, здесь вы сможете приобрести товары различных категорий.'
+    return welcome
 
 main_btns = [
     'Поды',
@@ -10,17 +11,16 @@ main_btns = [
 ]
 
 
-cancel_btn = 'Назад'
-buy_btn = 'Купить'
-
 pods_btns = [
     'Xros 2',
     'Aegis',
     'Drag 2',
     'Xros mini'
 ]
-name_pod = ''
-text_xros2 = "➖➖➖➖➖➖➖➖➖➖➖➖" + f"\nТовар: {name_pod}" + f"\nВ наличии: ⭕ or ✅" + "\n➖➖➖➖➖➖➖➖➖➖➖➖"
+
+def txt_xros2(text):
+    text_xros2 = "➖➖➖➖➖➖➖➖➖➖➖➖" + f"\nТовар: {text}" + f"\nВ наличии: ⭕ or ✅" + "\n➖➖➖➖➖➖➖➖➖➖➖➖"
+    return text_xros2
     
 
 
